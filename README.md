@@ -29,38 +29,6 @@ A Laravel-based backend system for managing expense requests with approval, reje
 
 ---
 
-## 📁 Project Structure Highlights
-
-app/
-├── Http/
-│ └── Controllers/
-│ └── ExpenseRequestController.php
-│ └── PaymentController.php
-├── Services/
-│ └── Payment/
-│ ├── Contracts/
-│ ├── Gateways/
-│ ├── Requests/
-│ └── PaymentService.php
-├── Jobs/
-│ └── AutoPayApprovedExpenses.php
-
-yaml
-Copy
-Edit
-
----
-
-## 🧪 Testing
-
-This project is prepared with modular, service-oriented architecture. While automated tests are not included, the structure allows for straightforward unit and feature testing, especially around:
-
-- Payment gateways
-- Expense request workflow
-- Notifications
-
----
-
 ## 🛠 Setup & Usage
 
 ### Step 1: Clone the Repository
@@ -70,15 +38,12 @@ git clone https://github.com/amirayinie/expense-request-system.git
 cd expense-request-system
 Step 2: Install Dependencies
 bash
-Copy
-Edit
+
 composer install
 cp .env.example .env
 php artisan key:generate
 Step 3: Migrate Database
 bash
-Copy
-Edit
 php artisan migrate
 Step 4: Seed Dummy Users (Optional)
 If needed, add test users manually or via seeder.
@@ -98,18 +63,13 @@ Uses Laravel's scheduler to auto-pay approved, unpaid requests daily at 8:00 AM.
 
 Registered in bootstrap/app.php:
 
-php
-Copy
-Edit
 use App\Jobs\AutoPayApprovedExpenses;
 use Illuminate\Support\Facades\Schedule;
 
 Schedule::job(new AutoPayApprovedExpenses)->dailyAt('08:00');
 You must run the scheduler with:
 
-bash
-Copy
-Edit
+
 php artisan schedule:run
 🧩 Extending the System
 To add a new bank gateway: create a class in App\Services\Payment\Gateways and implement PayableInterface.
