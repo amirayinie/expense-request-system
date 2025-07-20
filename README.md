@@ -1,4 +1,4 @@
-xpense Request System (Laravel)
+Expense Request System (Laravel)
 A Laravel-based system for submitting, reviewing, and processing employee expense requests with support for manual and automated payments.
 
 📌 Features
