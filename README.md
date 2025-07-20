@@ -41,9 +41,6 @@ SMS and Email services are mocked. Add your SMS/email provider logic in the resp
 Payment gateway logic is modular. You can add more gateways by extending the AbstractGatewayInterface.
 
 📁 Directory Structure
-markdown
-Copy
-Edit
 App/
  └── Services/
       └── Payment/
@@ -53,4 +50,4 @@ App/
            ├── Exceptions/
            └── PaymentService.php
 👤 Author
-Created by [Your Name] for technical assessment by Dadepardaz Puyay Sharif.
+Created by Amirhosein Ayinie for technical assessment by Dadepardaz Puyay Sharif.
