@@ -34,3 +34,23 @@ composer install
 php artisan key:generate
 php artisan migrate
 php artisan storage:link
+
+💡 Notes
+SMS and Email services are mocked. Add your SMS/email provider logic in the respective service class.
+
+Payment gateway logic is modular. You can add more gateways by extending the AbstractGatewayInterface.
+
+📁 Directory Structure
+markdown
+Copy
+Edit
+App/
+ └── Services/
+      └── Payment/
+           ├── Contracts/
+           ├── Gateways/
+           ├── Requests/
+           ├── Exceptions/
+           └── PaymentService.php
+👤 Author
+Created by [Your Name] for technical assessment by Dadepardaz Puyay Sharif.
